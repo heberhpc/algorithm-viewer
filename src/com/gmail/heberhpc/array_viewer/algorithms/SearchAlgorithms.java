@@ -1,14 +1,15 @@
 /**/
 
-
+//
 package com.gmail.heberhpc.array_viewer.algorithms;
 
-
+//
 import com.gmail.heberhpc.array_viewer.core.VerticalBarArray;
 
-
+//
 public class SearchAlgorithms {
-	
+
+	//linear search
 	public static void linearSearc(int target, VerticalBarArray data) {
 		
 		data.setAlgorithmName("Linear Search ---> Searchig for:"+ target);
@@ -24,14 +25,15 @@ public class SearchAlgorithms {
 		}
 	}
 	
-	
+	//interactive binary search
 	public static int InteractiveBinarySearch(VerticalBarArray data, int key) {
 			    
-		data.setAlgorithmName("InteractiveBinarySearch");
+		data.setAlgorithmName("Interactive Binary Search");
 		
 		int low=0;
 		int high = data.length();
 		int index = Integer.MAX_VALUE;
+		
 		while (low <= high) {
 			int mid = (low + high) / 2;
 			if (data.read(mid) < key) {

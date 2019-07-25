@@ -1,12 +1,12 @@
-/*Insertion Sort*/
+/**/
 
-
+//
 package com.gmail.heberhpc.array_viewer.algorithms;
 
-
+//
 import com.gmail.heberhpc.array_viewer.core.VerticalBarArray;
 
-
+//
 public class SortingAlgorithms {
 	
 	//Insertion Sort

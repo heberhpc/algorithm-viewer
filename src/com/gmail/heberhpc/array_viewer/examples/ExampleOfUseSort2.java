@@ -1,15 +1,15 @@
 /**/
 
-
+//
 package com.gmail.heberhpc.array_viewer.examples;
 
-
+//
 import java.util.Random;
 import com.gmail.heberhpc.array_viewer.algorithms.SortingAlgorithms;
 import com.gmail.heberhpc.array_viewer.core.VerticalBarArray;
 
-
-public class ExampleOfUseSort {
+//
+public class ExampleOfUseSort2 {
 	
 	public static void main (String [] args) {
 		
@@ -28,10 +28,9 @@ public class ExampleOfUseSort {
 		VerticalBarArray data = new VerticalBarArray(randomic);
 		
 		//setup a velocity: the higher n, the slower effect!!!
-		data.setPauseVelocity(60);
+		data.setPauseVelocity(45);
 
-		//SortingAlgorithms.selectionSort(data);
-		//applying test 
-		SortingAlgorithms.insertionSort(data);
+		SortingAlgorithms.selectionSort(data);
+		
 	}
 }

@@ -1,18 +1,22 @@
-/**/
+/*
+* @author: Heber Coutinho (heberhpc@gmail.com)
+*
+* This class "adapt" a array of ints and creates a "monitor" 
+* for view the operations on it.
+*
+*/
 
-
+//
 package com.gmail.heberhpc.array_viewer.core;
 
-
+//
 import java.awt.Color;
-
-
 import acm.graphics.GCompound;
 import acm.graphics.GLabel;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-
+//
 public class VerticalBarArray extends GraphicsProgram{
 	
 	//---FIELDS---//
@@ -44,14 +48,13 @@ public class VerticalBarArray extends GraphicsProgram{
 	private double infoPanelHeight=frameHeight-backgroundHeight;
 	private Color infoPanelColor = Color.BLACK;
 	
-	//Info Texts
+	//info texts
 	GCompound Labels; // graphic object that groups all labels
 	private GLabel readingLabel; //how many readings
 	private GLabel writingLabel; //how many writings
 	private GLabel otherInfo;	//other information
 	private GLabel algotithmName; //algorithm title
 	private String algName = "Unknow"; // default algorithm title
-
 
 	//graphicElements:graphic object that groups all other graphic elements
 	private GCompound graphicElements;
@@ -71,7 +74,7 @@ public class VerticalBarArray extends GraphicsProgram{
 	private int recordings;
 	
 	
-	//CONSTRUCTORS//
+	//---CONSTRUCTORS---//
 	public VerticalBarArray (int [] data){
 		//make a clone of the array	
 		this.data = data.clone();
@@ -80,12 +83,10 @@ public class VerticalBarArray extends GraphicsProgram{
 		this.start();	
 	}
 
-
 	//---RUN:animation---//
 	public void run() {
 		setup();
 	}
-
 
 	//---ARRAY OPERATIONS---//
 	/**
@@ -157,7 +158,6 @@ public class VerticalBarArray extends GraphicsProgram{
 		System.out.println("***PRINTING-END***");
 	}
 
-	
 	//find the smallest value in the array
 	private int getMin() {
 		int min = data[0];
@@ -170,7 +170,6 @@ public class VerticalBarArray extends GraphicsProgram{
 		return min;
 	}
 
-	
 	//find the highest value in the array
 	public int getMax() {
 		int max = data[0];
@@ -201,7 +200,6 @@ public class VerticalBarArray extends GraphicsProgram{
 		frame.setFillColor(Color.RED);
 		graphicElements.add(frame);
 		
-		
 		//background:rectangular area of ​​bars
 		background = new GRect(this.getX(),this.getY(), backgroundWidth, backgroundHeight);
 		background.setFilled(true);
@@ -216,7 +214,7 @@ public class VerticalBarArray extends GraphicsProgram{
 		infoPanel.setFillColor(infoPanelColor);
 		graphicElements.add(infoPanel);
 		
-		//STATISTICS LABELS
+		//---STATISTICS LABELS---//
 		Labels = new GCompound();// graphic object that groups all labels
 
 		//positon references
@@ -265,8 +263,12 @@ public class VerticalBarArray extends GraphicsProgram{
 		graphicElements.add(Labels);
 		
 		//position of all elements
-		double xGraphicElements = (this.getWidth()-graphicElements.getWidth()) / 2;
-		double ygraphicElements = (this.getHeight()-graphicElements.getHeight()) / 2;	
+		double xGraphicElements = 
+			(this.getWidth()-graphicElements.getWidth()) / 2;
+		
+		double ygraphicElements = 
+			(this.getHeight()-graphicElements.getHeight()) / 2;	
+		
 		graphicElements.setLocation(xGraphicElements, ygraphicElements);
 
 		//create array of bars to visualize data

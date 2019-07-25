@@ -5,11 +5,11 @@ package com.gmail.heberhpc.array_viewer.examples;
 
 //
 import java.util.Random;
-import com.gmail.heberhpc.array_viewer.algorithms.ExperimentalAlgorithms;
+import com.gmail.heberhpc.array_viewer.algorithms.SortingAlgorithms;
 import com.gmail.heberhpc.array_viewer.core.VerticalBarArray;
 
 //
-public class ExampleOfUseExperimental {
+public class ExampleOfUseSort1 {
 	
 	public static void main (String [] args) {
 		
@@ -28,9 +28,8 @@ public class ExampleOfUseExperimental {
 		VerticalBarArray data = new VerticalBarArray(randomic);
 		
 		//setup a velocity: the higher n, the slower effect!!!
-		data.setPauseVelocity(1);
+		data.setPauseVelocity(45);
 
-		//applying test 
-		ExperimentalAlgorithms.squareInsertionSortSelection(data);		
+		SortingAlgorithms.insertionSort(data);
 	}
 }

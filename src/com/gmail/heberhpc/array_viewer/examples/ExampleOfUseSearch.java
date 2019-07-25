@@ -1,13 +1,13 @@
 /**/
 
-
+//
 package com.gmail.heberhpc.array_viewer.examples;
 
-
+//
 import com.gmail.heberhpc.array_viewer.algorithms.SearchAlgorithms;
 import com.gmail.heberhpc.array_viewer.core.VerticalBarArray;
 
-
+//
 public class ExampleOfUseSearch {
 	
 	public static void main (String [] args) {
@@ -25,7 +25,7 @@ public class ExampleOfUseSearch {
 		VerticalBarArray data = new VerticalBarArray(fixed);
 		
 		//setup a velocity: the higher n, the slower effect!!!
-		data.setPauseVelocity(20);
+		data.setPauseVelocity(45);
 
 		//applying test 
 		SearchAlgorithms.linearSearc(395, data);		
